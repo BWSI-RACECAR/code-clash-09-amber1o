@@ -45,7 +45,7 @@ class Solution:
           for i in range(7, 7 + n):
             result *= i
 
-          return result
+                    return result
 def main():
     string1 = input()
     tc1 = Solution()
