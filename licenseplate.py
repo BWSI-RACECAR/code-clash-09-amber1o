@@ -24,28 +24,28 @@ Input: “.BC.234” ; Output: 168
 
 class Solution:
           a = 0
-        for i in range(3):
+          for i in range(3):
             if str[i] == '.':
                 a += 1
 
-        n = 0
-        for i in range(3, 7):
+          n = 0
+          for i in range(3, 7):
             if str[i] == '.':
                 n += 1
-                
-        result = 1
 
-        if a == 1:
+          result = 1
+
+          if a == 1:
             result *= 24
-        elif a == 2:
+          elif a == 2:
             result *= 25 * 24
-        elif a == 3:
+          elif a == 3:
             result *= 26 * 24 * 25
 
-        for i in range(7, 7 + n):
+          for i in range(7, 7 + n):
             result *= i
-        
-        return result
+
+          return result
 def main():
     string1 = input()
     tc1 = Solution()
