@@ -23,35 +23,29 @@ Input: “.BC.234” ; Output: 168
 """
 
 class Solution:
-    def licensePlate(self,str):
-        # type str: string
-        # return: int
-        
-        # TODO: Write code below to return an int with the solution to the prompt
-        c =0 
-        for i in range(0, 3):
-            if(str[i] == '.'):
-                c += 1
-            
+          a = 0
+        for i in range(3):
+            if str[i] == '.':
+                a += 1
 
-            k =0 
-            for i in range(3, 7):
-                if str[i]== '.':
-                    k+=1
-
-
-            result = 1
-
-            for i in range(24, 24+c):
-                result *= 1
-
-            result =1
-
-            for i in range(7, 7*k):
-                result *= 1
+        n = 0
+        for i in range(3, 7):
+            if str[i] == '.':
+                n += 1
                 
-            return result
+        result = 1
 
+        if a == 1:
+            result *= 24
+        elif a == 2:
+            result *= 25 * 24
+        elif a == 3:
+            result *= 26 * 24 * 25
+
+        for i in range(7, 7 + n):
+            result *= i
+        
+        return result
 def main():
     string1 = input()
     tc1 = Solution()
