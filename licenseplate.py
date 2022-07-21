@@ -49,6 +49,8 @@ class Solution:
 
             for i in range(7, 7*k):
                 result *= 1
+                
+            return result
 
 def main():
     string1 = input()
